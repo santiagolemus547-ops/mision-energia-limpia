@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Misión Energía Limpia | ODS 7</title>
+<style>
+:root{--navy:#123047;--blue:#176b87;--teal:#219b83;--yellow:#ffd166;--cream:#f4fbf8;--ink:#173244;--muted:#5d7380;--white:#fff;--line:#e1eaee}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:linear-gradient(145deg,#dff7ee,#e7f3ff);color:var(--ink);min-height:100vh}
+header{background:var(--navy);color:white;padding:16px 22px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}.brand{font-weight:900;font-size:1.1rem}.tag{font-size:.82rem;background:#244b60;padding:7px 11px;border-radius:999px}
+main{max-width:900px;margin:24px auto;padding:0 15px 32px}.panel{background:white;border-radius:24px;padding:clamp(18px,4.5vw,36px);box-shadow:0 15px 40px #12304718}.hero{text-align:center}.hero-art{font-size:3.6rem;line-height:1.2;margin:5px 0 12px}.eyebrow{font-size:.76rem;text-transform:uppercase;letter-spacing:1.6px;color:var(--blue);font-weight:900}h1{font-size:clamp(2rem,7vw,3.2rem);line-height:1.05;margin:10px 0 14px;color:var(--navy)}h2{margin:0 0 12px;color:var(--navy)}h3{margin:0 0 7px;color:var(--navy)}p{line-height:1.6;color:var(--muted)}
+button{border:0;border-radius:13px;padding:12px 17px;font:inherit;font-weight:800;cursor:pointer;transition:transform .12s,filter .12s}button:hover{filter:brightness(.97);transform:translateY(-1px)}button:focus-visible{outline:3px solid var(--yellow);outline-offset:3px}.primary{background:var(--teal);color:white}.secondary{background:#e9f3f5;color:var(--navy)}.options{display:grid;gap:11px;margin:20px 0}.option{width:100%;text-align:left;background:#f4f8fa;border:2px solid var(--line);color:var(--ink);padding:14px 15px}.option.correct{background:#e0f7e9;border-color:#2eaa68}.option.wrong{background:#fff0e9;border-color:#e68a60}.option:disabled{cursor:default}
+.row{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}.progress-wrap{height:9px;background:#e5eff1;border-radius:99px;overflow:hidden;margin:15px 0 22px}.progress{height:100%;background:var(--teal);width:0%;transition:width .25s}.stat{background:#f0f8f7;padding:10px 13px;border-radius:13px;font-weight:800}.feedback{padding:12px 14px;border-radius:12px;background:#f7fafb;color:var(--ink);line-height:1.5;margin:13px 0}.feedback:empty{display:none}.hidden{display:none!important}.tip{background:#fff8df;border-left:5px solid var(--yellow);padding:13px 16px;border-radius:8px;color:#5e4a16;line-height:1.5;text-align:left}.footer{text-align:center;font-size:.82rem;color:#617984;margin:18px 0 0}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px;margin:22px 0}.tile{background:#f1f9f7;border:1px solid #d9eee7;border-radius:16px;padding:17px;text-align:left}.tile .emoji{font-size:2rem}.tile p{font-size:.92rem;margin:5px 0 0}.field{width:100%;padding:13px;border:2px solid var(--line);border-radius:12px;font:inherit;margin:8px 0 15px}.pill{display:inline-block;border-radius:999px;background:#eaf5ff;color:#245a76;padding:5px 10px;font-size:.8rem;font-weight:800}.score{font-size:3rem;color:var(--teal);font-weight:900}.review-item{padding:12px 0;border-bottom:1px solid var(--line);text-align:left}.review-item:last-child{border-bottom:0}.medal{font-size:4rem}.namebar{font-size:.92rem;color:#dbeaf0}
+</style>
+</head>
+<body>
+<header><div><div class="brand">⚡ MISIÓN ENERGÍA LIMPIA</div><div class="namebar">Aprende, juega y ayuda al planeta</div></div><div class="tag">ODS 7 · Energía asequible y no contaminante</div></header>
+<main>
+<section class="panel hero" id="start">
+ <div class="hero-art">☀️ 🌬️ 🔋</div><div class="eyebrow">Juego educativo interactivo</div><h1>¡Acepta la misión!</h1>
+ <p>Conviértete en un guardián de la energía. Aprende sobre las energías renovables, descubre cómo ahorrar electricidad y demuestra tus conocimientos en tres niveles.</p>
+ <div class="grid">
+  <div class="tile"><div class="emoji">🌱</div><h3>Nivel 1</h3><b>Aprendiz</b><p>Conceptos básicos de energía limpia.</p></div>
+  <div class="tile"><div class="emoji">💡</div><h3>Nivel 2</h3><b>Ahorrador experto</b><p>Hábitos responsables en casa y colegio.</p></div>
+  <div class="tile"><div class="emoji">🌎</div><h3>Nivel 3</h3><b>Héroe del planeta</b><p>ODS 7 y decisiones sostenibles.</p></div>
+ </div>
+ <label for="player"><b>Escribe tu nombre o apodo para comenzar:</b></label><input class="field" id="player" maxlength="24" placeholder="Ejemplo: Guardián Solar">
+ <div class="tip">🎯 <b>Tu misión:</b> responde 15 preguntas. Cada respuesta correcta vale 10 puntos. Lee las explicaciones para aprender incluso cuando te equivoques.</div>
+ <p><button class="primary" id="startBtn">Comenzar misión →</button></p>
+ <p class="footer">Proyecto escolar · Objetivo de Desarrollo Sostenible 7</p>
+</section>
+<section class="panel hidden" id="learn">
+ <div class="eyebrow">Antes de empezar</div><h2>Mini guía de energía limpia</h2>
+ <div class="grid">
+  <div class="tile"><div class="emoji">☀️</div><h3>Solar</h3><p>Usa la luz del sol para generar electricidad o calor.</p></div>
+  <div class="tile"><div class="emoji">🌬️</div><h3>Eólica</h3><p>Aprovecha el viento mediante aerogeneradores.</p></div>
+  <div class="tile"><div class="emoji">💧</div><h3>Hidroeléctrica</h3><p>Utiliza el movimiento del agua para generar electricidad.</p></div>
+  <div class="tile"><div class="emoji">🔌</div><h3>Ahorro</h3><p>Apagar luces y usar aparatos eficientemente reduce el consumo.</p></div>
+ </div>
+ <div class="tip">La ODS 7 busca garantizar el acceso a una energía asequible, segura, sostenible y moderna para todas las personas.</div>
+ <p style="text-align:center"><button class="primary" id="learnBtn">¡Estoy listo! Empezar preguntas →</button></p>
+</section>
+<section class="panel hidden" id="quiz">
+ <div class="row"><div class="stat" id="counter">Pregunta 1 de 15</div><div class="stat">⭐ Puntos: <span id="scoreTop">0</span></div><div class="pill" id="level">Nivel 1</div></div>
+ <div class="progress-wrap"><div class="progress" id="progress"></div></div>
+ <div class="eyebrow" id="category">Energías renovables</div><h2 id="question"></h2>
+ <div class="options" id="options"></div><div class="feedback" id="feedback" aria-live="polite"></div>
+ <div class="row"><span id="streak"></span><button class="primary hidden" id="nextBtn">Siguiente →</button></div>
+</section>
+<section class="panel hero hidden" id="result">
+ <div class="medal" id="resultIcon">🏆</div><div class="eyebrow">Misión completada</div><h1 id="resultTitle">¡Buen trabajo!</h1>
+ <p id="playerResult"></p><div class="score"><span id="finalScore">0</span>/150</div><p id="resultText"></p>
+ <div class="tip">🌱 <b>Compromiso ecológico:</b> apaga las luces que no necesitas, aprovecha la luz natural, usa los aparatos de manera responsable y comparte lo que aprendiste.</div>
+ <div class="grid"><div class="tile"><h3>Respuestas correctas</h3><div class="score" style="font-size:2rem" id="correctCount">0</div></div><div class="tile"><h3>Porcentaje</h3><div class="score" style="font-size:2rem" id="percent">0%</div></div><div class="tile"><h3>Rango obtenido</h3><h2 id="rank">🌱 Explorador</h2></div></div>
+ <button class="primary" id="againBtn">Jugar otra vez ↻</button> <button class="secondary" id="reviewBtn">Revisar respuestas</button>
+ <div id="review" class="hidden" style="margin-top:20px"></div>
+ <p class="footer">¡La energía más limpia también es la que aprendemos a no desperdiciar!</p>
+</section>
+</main>
+<script>
+const questions=[
+{c:"Nivel 1 · Energías renovables",q:"¿Cuál de estas fuentes aprovecha la luz del sol?",a:["Energía solar","Carbón","Gasolina"],ok:0,why:"Los paneles solares aprovechan la luz del sol para producir electricidad."},
+{c:"Nivel 1 · Energías renovables",q:"¿Qué fuente utiliza la fuerza del viento?",a:["Petróleo","Energía eólica","Gas natural"],ok:1,why:"La energía eólica usa aerogeneradores que giran con el viento."},
+{c:"Nivel 1 · Energías renovables",q:"¿Cuál de estas fuentes es renovable?",a:["Carbón","Gasolina","Luz solar"],ok:2,why:"La luz solar se renueva naturalmente y puede aprovecharse para generar energía."},
+{c:"Nivel 1 · Energías renovables",q:"¿Qué utiliza una central hidroeléctrica para generar electricidad?",a:["El movimiento del agua","El humo de los carros","La basura plástica únicamente"],ok:0,why:"Las centrales hidroeléctricas aprovechan la energía del agua en movimiento."},
+{c:"Nivel 1 · Energías renovables",q:"¿Cuál es un combustible fósil?",a:["Viento","Carbón","Luz solar"],ok:1,why:"El carbón es un combustible fósil. Al quemarlo se liberan gases contaminantes."},
+{c:"Nivel 2 · Ahorro en casa",q:"Sales de una habitación y no queda nadie. ¿Qué conviene hacer?",a:["Dejar las luces encendidas","Prender otra lámpara","Apagar las luces que no se necesitan"],ok:2,why:"Apagar las luces innecesarias ayuda a reducir el consumo eléctrico."},
+{c:"Nivel 2 · Ahorro en casa",q:"En un día soleado, ¿cómo puedes aprovechar la luz natural?",a:["Abrir cortinas y persianas","Encender todas las lámparas","Cerrar todas las ventanas y prender luces"],ok:0,why:"La luz natural puede iluminar los espacios sin necesitar tantas lámparas."},
+{c:"Nivel 2 · Ahorro en casa",q:"¿Qué hábito ayuda a usar responsablemente los aparatos eléctricos?",a:["Dejar el televisor prendido sin verlo","Apagar los aparatos cuando no se usan","Abrir la nevera por mucho tiempo"],ok:1,why:"Apagar los aparatos que no se necesitan evita desperdiciar electricidad."},
+{c:"Nivel 2 · Ahorro en casa",q:"¿Qué puedes hacer en el colegio para ahorrar energía?",a:["Dejar proyectores prendidos en el descanso","Prender luces aunque haya suficiente claridad","Apagar equipos y luces cuando no se necesitan"],ok:2,why:"En el colegio todos pueden ayudar apagando los equipos que ya no se usan."},
+{c:"Nivel 2 · Ahorro en casa",q:"¿Cuál es una buena práctica al cargar un dispositivo?",a:["Cargarlo de forma responsable y desconectarlo cuando corresponda","Dejar todos los cargadores conectados siempre","Usar cables dañados"],ok:0,why:"Usar cargadores en buen estado y desconectarlos cuando no se necesitan es una práctica responsable y segura."},
+{c:"Nivel 3 · ODS 7",q:"¿Qué busca la ODS 7?",a:["Que todos consuman más energía sin importar el origen","Energía asequible, segura, sostenible y moderna para todos","Eliminar la electricidad de los hogares"],ok:1,why:"La ODS 7 busca garantizar acceso a energía asequible, segura, sostenible y moderna."},
+{c:"Nivel 3 · ODS 7",q:"¿Qué significa que la energía sea asequible?",a:["Que solo algunas personas puedan pagarla","Que sea siempre gratuita","Que su costo sea accesible para las personas"],ok:2,why:"Asequible significa que su costo sea accesible."},
+{c:"Nivel 3 · ODS 7",q:"¿Cuál es una ventaja de la energía solar y eólica?",a:["Generan electricidad con bajas emisiones durante su funcionamiento","Necesitan quemar carbón para funcionar","Siempre producen la misma cantidad de energía sin importar el clima"],ok:0,why:"La solar y la eólica producen electricidad con bajas emisiones durante su funcionamiento, aunque dependen de las condiciones naturales."},
+{c:"Nivel 3 · ODS 7",q:"¿Por qué es importante mejorar el acceso a la energía?",a:["Porque la energía solo sirve para jugar","Porque ayuda a iluminar hogares, estudiar y realizar muchas actividades","Porque evita que necesitemos cuidar los recursos"],ok:1,why:"La energía permite iluminar, estudiar, comunicarnos y acceder a muchos servicios importantes."},
+{c:"Nivel 3 · Reto final",q:"¿Cuál es la mejor combinación para cuidar la energía?",a:["Usar más electricidad sin pensar","Dejar las luces encendidas y desperdiciar energía","Ahorrar energía y apoyar fuentes más limpias"],ok:2,why:"Ahorrar energía y avanzar hacia fuentes más limpias ayuda a las personas y al planeta."}
+];
+let order=[],index=0,score=0,answered=false,chosen=[],player="";
+const $=id=>document.getElementById(id);
+function shuffle(arr){return arr.map(v=>[Math.random(),v]).sort((a,b)=>a[0]-b[0]).map(x=>x[1])}
+function show(id){["start","learn","quiz","result"].forEach(x=>$(x).classList.toggle("hidden",x!==id))}
+function begin(){player=$("player").value.trim()||"Guardián de la energía";order=shuffle([...questions]);index=0;score=0;chosen=[];show("learn")}
+function render(){answered=false;const item=order[index];$("counter").textContent=`Pregunta ${index+1} de ${order.length}`;$("scoreTop").textContent=score;$("progress").style.width=`${index/order.length*100}%`;$("category").textContent=item.c;$("level").textContent=index<5?"Nivel 1":index<10?"Nivel 2":"Nivel 3";$("question").textContent=item.q;$("feedback").textContent="";$("nextBtn").classList.add("hidden");$("streak").textContent="";$("options").innerHTML="";item.a.forEach((answer,i)=>{const b=document.createElement("button");b.className="option";b.textContent=String.fromCharCode(65+i)+". "+answer;b.onclick=()=>choose(i);$("options").appendChild(b)})}
+function startQuiz(){show("quiz");render()}
+function choose(i){if(answered)return;answered=true;const item=order[index];[...$("options").children].forEach((b,j)=>{b.disabled=true;if(j===item.ok)b.classList.add("correct");if(j===i&&i!==item.ok)b.classList.add("wrong")});if(i===item.ok){score+=10;$("feedback").textContent="✅ ¡Correcto! "+item.why}else{$("feedback").textContent="💡 ¡Sigue aprendiendo! "+item.why}chosen.push({q:item.q,answer:item.a[i],correct:item.a[item.ok],ok:i===item.ok});$("scoreTop").textContent=score;$("streak").textContent=i===item.ok?"+10 puntos":"¡Aprender también cuenta!";$("nextBtn").textContent=index===order.length-1?"Ver resultado →":(index===4||index===9?"Continuar al siguiente nivel →":"Siguiente →");$("nextBtn").classList.remove("hidden");$("progress").style.width=`${(index+1)/order.length*100}%`}
+function next(){if(!answered)return;if(index<order.length-1){index++;render()}else finish()}
+function finish(){show("result");const correct=chosen.filter(x=>x.ok).length;const pct=Math.round(correct/questions.length*100);$("finalScore").textContent=score;$("correctCount").textContent=`${correct}/15`;$("percent").textContent=pct+"%";$("playerResult").textContent="Misión de: "+player;$("review").classList.add("hidden");$("reviewBtn").textContent="Revisar respuestas";if(score>=130){$("resultIcon").textContent="🏆";$("resultTitle").textContent="¡Héroe de la energía!";$("rank").textContent="🏆 Guardián solar"}else if(score>=100){$("resultIcon").textContent="🌟";$("resultTitle").textContent="¡Gran trabajo!";$("rank").textContent="🌟 Experto ecológico"}else if(score>=70){$("resultIcon").textContent="💡";$("resultTitle").textContent="¡Vas por buen camino!";$("rank").textContent="💡 Ahorrador"}else{$("resultIcon").textContent="🌱";$("resultTitle").textContent="¡Sigue aprendiendo!";$("rank").textContent="🌱 Explorador"}$("resultText").textContent=`Lograste ${correct} respuestas correctas de 15. Tu puntuación es ${score} de 150 (${pct}%). ${pct>=70?"¡Ya sabes mucho sobre cómo cuidar la energía!":"Revisa las respuestas y vuelve a intentarlo. Cada intento te ayuda a aprender."}`}
+$("startBtn").onclick=begin;$("learnBtn").onclick=startQuiz;$("nextBtn").onclick=next;$("againBtn").onclick=()=>{show("start");$("player").value=player};$("reviewBtn").onclick=()=>{const r=$("review");if(r.classList.contains("hidden")){r.innerHTML="<h2>Repaso de la misión</h2>"+chosen.map((x,i)=>`<div class="review-item"><b>${i+1}. ${x.q}</b><br>Respuesta correcta: <b>${x.correct}</b><br>${x.ok?"✅ Tu respuesta fue correcta.":"Tu respuesta: "+x.answer+"<br>💡 ¡Ahora ya conoces la correcta!"}</div>`).join("");r.classList.remove("hidden");$("reviewBtn").textContent="Ocultar respuestas"}else{r.classList.add("hidden");$("reviewBtn").textContent="Revisar respuestas"}};
+</script>
+</body></html>
